@@ -12,8 +12,12 @@ You will also see any lint errors in the console.
 
 ## functionality
 you can choose which item to put in the cart by clicking on it.
+
 you can mark the items in the cart as purchased.
+
 by clicking the purchased button you can see the items that are already purcahsed.
+
 you can search for item using the search bar.
+
 
 ![alt text](https://github.com/yaronlev9/shopping-cart-react/blob/master/shopping%20cart%20app.png)
