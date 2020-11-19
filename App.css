@@ -69,3 +69,7 @@
   border: black dotted;
   border-width: 1px;
 }
+
+.remove:hover {
+  cursor: pointer;
+}

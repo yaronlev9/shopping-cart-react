@@ -1,9 +1,0 @@
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: calc(50% - 5em);
-}
-
-.all, .purchased{
-    margin: 10px;
-}

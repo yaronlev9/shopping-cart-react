@@ -1,10 +1,23 @@
 import React, {useState} from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import GroceriesList from './GroceriesList';
-import BasketList from './BasketList';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import GroceriesList from './components/GroceriesList';
+import BasketList from './components/BasketList';
 import './App.css';
+import firebase from 'firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
+
+firebase.initializeApp({
+  apiKey: "AIzaSyC138QFE-DV7pikqHtOkA8VJzW2YDmjji8",
+  authDomain: "shopping-cart-e46ac.firebaseapp.com",
+  databaseURL: "https://shopping-cart-e46ac.firebaseio.com",
+  projectId: "shopping-cart-e46ac",
+  storageBucket: "shopping-cart-e46ac.appspot.com",
+  messagingSenderId: "276248348751",
+  appId: "1:276248348751:web:c3ffd16c6d1995112f823a",
+  measurementId: "G-GT3DNRRE57"
+});
 
 let items = ['Strawberry', 'Blueberry', 'Orange', 'Banana', 'Apple', 'Carrot', 'Celery', 'Mushroom', 'Green Pepper', 'Eggs', 'Cheese',
 'Butter', 'Chicken', 'Beef', 'Pork', 'Fish', 'Rice', 'Pasta', 'Bread']
@@ -71,7 +84,9 @@ function App() {
   return (
     <div className="App">
       <Header value={toFind} onChange={e => handleChange(e)}/>
+        <div className="remove">
         <i className="fa fa-trash" aria-hidden="true" onClick={clearLst}> clear list</i>
+        </div>
       <div className="flex-container">
         <div>
         <GroceriesList items={groceryItems} onClick={(name)=>handleClick(name)}/>
